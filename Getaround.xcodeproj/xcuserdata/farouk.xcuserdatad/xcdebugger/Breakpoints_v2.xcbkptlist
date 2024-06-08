@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "450A8C66-4F86-4089-BAAF-997D750835AA"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "806BE96D-532B-4CBF-A07E-CC23C5F6C7CD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Getaround/Model/Repository/FavoriteCarLocalRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "insertCar(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "806BE96D-532B-4CBF-A07E-CC23C5F6C7CD - ebc28d3f516b9467"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Getaround.FavoriteCarLocalRepository.insertCar(Getaround.Car) -&gt; ()"
+                  moduleName = "Getaround"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/farouk/Workspace/Getaround/Getaround/Model/Repository/FavoriteCarLocalRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "806BE96D-532B-4CBF-A07E-CC23C5F6C7CD - ebc28d3f516b94eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Getaround.FavoriteCarLocalRepository.insertCar(Getaround.Car) -&gt; ()"
+                  moduleName = "Getaround"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/farouk/Workspace/Getaround/Getaround/Model/Repository/FavoriteCarLocalRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "180">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F7325E90-4A23-4216-A6E0-A98B752381DE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Getaround/Model/Repository/FavoriteCarLocalRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "removeCar(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F7325E90-4A23-4216-A6E0-A98B752381DE - 2be49637c3147722"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Getaround.FavoriteCarLocalRepository.removeCar(Getaround.Car) -&gt; ()"
+                  moduleName = "Getaround"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/farouk/Workspace/Getaround/Getaround/Model/Repository/FavoriteCarLocalRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "184">
+               </Location>
+               <Location
+                  uuid = "F7325E90-4A23-4216-A6E0-A98B752381DE - 2be49637c31476a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Getaround.FavoriteCarLocalRepository.removeCar(Getaround.Car) -&gt; ()"
+                  moduleName = "Getaround"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/farouk/Workspace/Getaround/Getaround/Model/Repository/FavoriteCarLocalRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "184">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

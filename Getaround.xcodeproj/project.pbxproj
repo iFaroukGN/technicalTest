@@ -9,21 +9,59 @@
 /* Begin PBXBuildFile section */
 		1337F8292C134938005545DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337F8282C134938005545DE /* AppDelegate.swift */; };
 		1337F82B2C134938005545DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337F82A2C134938005545DE /* SceneDelegate.swift */; };
-		1337F82D2C134938005545DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337F82C2C134938005545DE /* ViewController.swift */; };
-		1337F8302C134938005545DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1337F82E2C134938005545DE /* Main.storyboard */; };
+		1337F82D2C134938005545DE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337F82C2C134938005545DE /* HomeViewController.swift */; };
 		1337F8322C134941005545DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1337F8312C134941005545DE /* Assets.xcassets */; };
 		1337F8352C134942005545DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1337F8332C134942005545DE /* LaunchScreen.storyboard */; };
+		1337F8402C1349C8005545DE /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337F83F2C1349C8005545DE /* APICall.swift */; };
+		1337F8432C134B3E005545DE /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337F8422C134B3E005545DE /* Car.swift */; };
+		1337F8452C134BE5005545DE /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337F8442C134BE5005545DE /* Owner.swift */; };
+		1337F8472C134C0E005545DE /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337F8462C134C0E005545DE /* Rating.swift */; };
+		1337F84B2C134C86005545DE /* CarRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337F84A2C134C86005545DE /* CarRepository.swift */; };
+		1337F84D2C134E44005545DE /* CarAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337F84C2C134E44005545DE /* CarAPI.swift */; };
+		1337F8502C134EE6005545DE /* CarAPIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337F84F2C134EE6005545DE /* CarAPIEndpoints.swift */; };
+		1337F8532C135196005545DE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337F8522C135196005545DE /* DetailViewController.swift */; };
+		1337F8562C1354FC005545DE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337F8552C1354FC005545DE /* HomeViewModel.swift */; };
+		1337F8582C135508005545DE /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337F8572C135508005545DE /* DetailViewModel.swift */; };
+		1337F85A2C13623C005545DE /* HomeCarListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337F8592C13623C005545DE /* HomeCarListView.swift */; };
+		1337F85D2C137606005545DE /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337F85C2C137606005545DE /* CustomImageView.swift */; };
+		1337F85F2C137637005545DE /* HomeCarListView+CarHeadlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337F85E2C137637005545DE /* HomeCarListView+CarHeadlineView.swift */; };
+		1337F8612C137646005545DE /* HomeCarListView+CarSubHeadlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337F8602C137646005545DE /* HomeCarListView+CarSubHeadlineView.swift */; };
+		1337F8662C13A912005545DE /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337F8652C13A912005545DE /* RatingView.swift */; };
+		1337F8682C13BC8A005545DE /* CarInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337F8672C13BC8A005545DE /* CarInfoCollectionViewCell.swift */; };
+		13CB73A82C13D50500F6FFF5 /* HeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CB73A72C13D50500F6FFF5 /* HeaderReusableView.swift */; };
+		13CB73AA2C13EAA800F6FFF5 /* OwnerInfoCollectinViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CB73A92C13EAA800F6FFF5 /* OwnerInfoCollectinViewCell.swift */; };
+		13CB73AC2C14041200F6FFF5 /* CarRentalPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CB73AB2C14041200F6FFF5 /* CarRentalPriceView.swift */; };
+		13CB73AE2C1499A300F6FFF5 /* FavoriteCarLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CB73AD2C1499A300F6FFF5 /* FavoriteCarLocalRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1337F8252C134938005545DE /* Getaround.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Getaround.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1337F8282C134938005545DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1337F82A2C134938005545DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1337F82C2C134938005545DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1337F82F2C134938005545DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1337F82C2C134938005545DE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1337F8312C134941005545DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1337F8342C134942005545DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1337F8362C134942005545DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1337F83F2C1349C8005545DE /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
+		1337F8422C134B3E005545DE /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		1337F8442C134BE5005545DE /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		1337F8462C134C0E005545DE /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		1337F84A2C134C86005545DE /* CarRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepository.swift; sourceTree = "<group>"; };
+		1337F84C2C134E44005545DE /* CarAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAPI.swift; sourceTree = "<group>"; };
+		1337F84F2C134EE6005545DE /* CarAPIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAPIEndpoints.swift; sourceTree = "<group>"; };
+		1337F8522C135196005545DE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1337F8552C1354FC005545DE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		1337F8572C135508005545DE /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		1337F8592C13623C005545DE /* HomeCarListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCarListView.swift; sourceTree = "<group>"; };
+		1337F85C2C137606005545DE /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		1337F85E2C137637005545DE /* HomeCarListView+CarHeadlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeCarListView+CarHeadlineView.swift"; sourceTree = "<group>"; };
+		1337F8602C137646005545DE /* HomeCarListView+CarSubHeadlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeCarListView+CarSubHeadlineView.swift"; sourceTree = "<group>"; };
+		1337F8652C13A912005545DE /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		1337F8672C13BC8A005545DE /* CarInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		13CB73A72C13D50500F6FFF5 /* HeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderReusableView.swift; sourceTree = "<group>"; };
+		13CB73A92C13EAA800F6FFF5 /* OwnerInfoCollectinViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerInfoCollectinViewCell.swift; sourceTree = "<group>"; };
+		13CB73AB2C14041200F6FFF5 /* CarRentalPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRentalPriceView.swift; sourceTree = "<group>"; };
+		13CB73AD2C1499A300F6FFF5 /* FavoriteCarLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCarLocalRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +94,122 @@
 		1337F8272C134938005545DE /* Getaround */ = {
 			isa = PBXGroup;
 			children = (
+				1337F85B2C136272005545DE /* View */,
+				1337F8542C1351AF005545DE /* ViewModels */,
+				1337F8512C13512D005545DE /* ViewControllers */,
+				1337F8412C134B2E005545DE /* Model */,
+				1337F83C2C134985005545DE /* Network */,
 				1337F8282C134938005545DE /* AppDelegate.swift */,
 				1337F82A2C134938005545DE /* SceneDelegate.swift */,
-				1337F82C2C134938005545DE /* ViewController.swift */,
-				1337F82E2C134938005545DE /* Main.storyboard */,
 				1337F8312C134941005545DE /* Assets.xcassets */,
 				1337F8332C134942005545DE /* LaunchScreen.storyboard */,
 				1337F8362C134942005545DE /* Info.plist */,
 			);
 			path = Getaround;
+			sourceTree = "<group>";
+		};
+		1337F83C2C134985005545DE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1337F83F2C1349C8005545DE /* APICall.swift */,
+				1337F84E2C134ED3005545DE /* CarAPI */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1337F8412C134B2E005545DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1337F8492C134C74005545DE /* Repository */,
+				1337F8482C134C36005545DE /* Data */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1337F8482C134C36005545DE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1337F8422C134B3E005545DE /* Car.swift */,
+				1337F8442C134BE5005545DE /* Owner.swift */,
+				1337F8462C134C0E005545DE /* Rating.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1337F8492C134C74005545DE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				1337F84A2C134C86005545DE /* CarRepository.swift */,
+				13CB73AD2C1499A300F6FFF5 /* FavoriteCarLocalRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		1337F84E2C134ED3005545DE /* CarAPI */ = {
+			isa = PBXGroup;
+			children = (
+				1337F84C2C134E44005545DE /* CarAPI.swift */,
+				1337F84F2C134EE6005545DE /* CarAPIEndpoints.swift */,
+			);
+			path = CarAPI;
+			sourceTree = "<group>";
+		};
+		1337F8512C13512D005545DE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1337F82C2C134938005545DE /* HomeViewController.swift */,
+				1337F8522C135196005545DE /* DetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1337F8542C1351AF005545DE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1337F8552C1354FC005545DE /* HomeViewModel.swift */,
+				1337F8572C135508005545DE /* DetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1337F85B2C136272005545DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1337F8652C13A912005545DE /* RatingView.swift */,
+				1337F85C2C137606005545DE /* CustomImageView.swift */,
+				1337F8642C13A1EB005545DE /* DetailView */,
+				1337F8622C1376C3005545DE /* HomeCarListView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1337F8622C1376C3005545DE /* HomeCarListView */ = {
+			isa = PBXGroup;
+			children = (
+				1337F8592C13623C005545DE /* HomeCarListView.swift */,
+				1337F85E2C137637005545DE /* HomeCarListView+CarHeadlineView.swift */,
+				1337F8602C137646005545DE /* HomeCarListView+CarSubHeadlineView.swift */,
+			);
+			path = HomeCarListView;
+			sourceTree = "<group>";
+		};
+		1337F8632C13A1DF005545DE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1337F8672C13BC8A005545DE /* CarInfoCollectionViewCell.swift */,
+				13CB73A92C13EAA800F6FFF5 /* OwnerInfoCollectinViewCell.swift */,
+				13CB73AB2C14041200F6FFF5 /* CarRentalPriceView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1337F8642C13A1EB005545DE /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				1337F8632C13A1DF005545DE /* Cells */,
+				13CB73A72C13D50500F6FFF5 /* HeaderReusableView.swift */,
+			);
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +272,6 @@
 			files = (
 				1337F8352C134942005545DE /* LaunchScreen.storyboard in Resources */,
 				1337F8322C134941005545DE /* Assets.xcassets in Resources */,
-				1337F8302C134938005545DE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +282,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1337F82D2C134938005545DE /* ViewController.swift in Sources */,
+				1337F8682C13BC8A005545DE /* CarInfoCollectionViewCell.swift in Sources */,
+				1337F8532C135196005545DE /* DetailViewController.swift in Sources */,
+				13CB73A82C13D50500F6FFF5 /* HeaderReusableView.swift in Sources */,
+				1337F85F2C137637005545DE /* HomeCarListView+CarHeadlineView.swift in Sources */,
+				13CB73AE2C1499A300F6FFF5 /* FavoriteCarLocalRepository.swift in Sources */,
+				1337F82D2C134938005545DE /* HomeViewController.swift in Sources */,
+				1337F8662C13A912005545DE /* RatingView.swift in Sources */,
+				13CB73AC2C14041200F6FFF5 /* CarRentalPriceView.swift in Sources */,
+				1337F8452C134BE5005545DE /* Owner.swift in Sources */,
+				1337F8502C134EE6005545DE /* CarAPIEndpoints.swift in Sources */,
 				1337F8292C134938005545DE /* AppDelegate.swift in Sources */,
+				1337F8432C134B3E005545DE /* Car.swift in Sources */,
+				1337F85A2C13623C005545DE /* HomeCarListView.swift in Sources */,
+				1337F84B2C134C86005545DE /* CarRepository.swift in Sources */,
+				13CB73AA2C13EAA800F6FFF5 /* OwnerInfoCollectinViewCell.swift in Sources */,
+				1337F8562C1354FC005545DE /* HomeViewModel.swift in Sources */,
+				1337F8402C1349C8005545DE /* APICall.swift in Sources */,
+				1337F8582C135508005545DE /* DetailViewModel.swift in Sources */,
 				1337F82B2C134938005545DE /* SceneDelegate.swift in Sources */,
+				1337F8612C137646005545DE /* HomeCarListView+CarSubHeadlineView.swift in Sources */,
+				1337F84D2C134E44005545DE /* CarAPI.swift in Sources */,
+				1337F8472C134C0E005545DE /* Rating.swift in Sources */,
+				1337F85D2C137606005545DE /* CustomImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1337F82E2C134938005545DE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1337F82F2C134938005545DE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1337F8332C134942005545DE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,12 +448,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TM2R2994PY;
+				DEVELOPMENT_TEAM = V4MJPE974Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Getaround/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -305,7 +460,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = fr.test..Getaround;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.test.Getaround;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -320,12 +475,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TM2R2994PY;
+				DEVELOPMENT_TEAM = V4MJPE974Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Getaround/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -333,7 +487,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = fr.test..Getaround;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.test.Getaround;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
