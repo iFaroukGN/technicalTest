@@ -26,7 +26,9 @@ final class CarRentalPriceView: UIView {
 	
 	private func setupViews() {
 		backgroundColor = .secondarySystemGroupedBackground
-
+		layer.cornerRadius = 10.0
+		layer.borderColor = UIColor.quaternaryLabel.cgColor
+		
 		let pricelabel = UILabel()
 		pricelabel.font = UIFont.boldSystemFont(ofSize: 30)
 		pricelabel.textColor = .label
@@ -69,12 +71,6 @@ final class CarRentalPriceView: UIView {
 		pricelabel.text = price
 		dayLabel.text = "per day"
 		
-		if layerIshidden {
-			layer.borderWidth = 0.0
-		} else {
-			layer.borderWidth = 1.0
-			layer.cornerRadius = 10.0
-			layer.borderColor = UIColor.quaternaryLabel.cgColor
-		}
+		layer.borderWidth = layerIshidden ? 0.0 : 1.0
 	}
 }
