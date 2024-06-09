@@ -79,6 +79,8 @@ class RatingView: UIView {
 			ratings.append(.empty)
 		}
 		
+		stackView.arrangedSubviews.forEach { stackView.removeArrangedSubview($0)  }
+		
 		ratings.forEach { state in
 			let imageView = UIImageView(image: state.image)
 			imageView.tintColor = configuration.color

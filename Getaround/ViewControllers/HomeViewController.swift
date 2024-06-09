@@ -16,6 +16,8 @@ class HomeViewController: UIViewController {
 	private weak var collectionView: UICollectionView!
 	private weak var rightBarButtonItem: UIBarButtonItem!
 	
+	private var displayKind: DisplayKind = .grid
+	
 	private var disposables: Set<AnyCancellable> = []
 	
 	init(viewModel: HomeViewModel) {
@@ -30,7 +32,7 @@ class HomeViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
+		
 		title = "Rentable cars"
 		
 		setupViews()
@@ -39,35 +41,9 @@ class HomeViewController: UIViewController {
 		
 		bindViewModel()
 	}
-
+	
 	private func setupViews() {
 		view.backgroundColor = .systemBackground
-		
-		let hightFirstAction = UIAction(title: "Best rating", 
-										image: UIImage(systemName: "arrow.up")) { [weak self] _ in
-			guard let self = self else {
-				return
-			}
-			self.viewModel.sortCarsBy(order: .best)
-		}
-		
-		let lowFirstAction = UIAction(title: "Worst rating", 
-									  image: UIImage(systemName: "arrow.down")) { [weak self] _ in
-			guard let self = self else {
-				return
-			}
-			self.viewModel.sortCarsBy(order: .worst)
-		}
-		
-		let rightBarButtonItem = UIBarButtonItem(
-			image: UIImage(systemName: "line.3.horizontal.decrease.circle"),
-			menu: UIMenu(
-				title: "Sort cars",
-				children: [hightFirstAction,
-						   lowFirstAction])
-		)
-		
-		navigationItem.rightBarButtonItem = rightBarButtonItem
 		
 		let collectionView = UICollectionView(frame: view.bounds,
 											  collectionViewLayout: createLayout())
@@ -77,6 +53,62 @@ class HomeViewController: UIViewController {
 		collectionView.delegate = self
 		
 		view.addSubview(collectionView)
+		
+		let hightFirstAction = UIAction(title: "Best rating",
+										image: UIImage(systemName: "arrow.up")) { [weak self] _ in
+			guard let self = self else {
+				return
+			}
+			self.viewModel.sortCarsBy(order: .best)
+		}
+		
+		let lowFirstAction = UIAction(title: "Worst rating",
+									  image: UIImage(systemName: "arrow.down")) { [weak self] _ in
+			guard let self = self else {
+				return
+			}
+			self.viewModel.sortCarsBy(order: .worst)
+		}
+		
+		let topItem = UIMenu(title: "Sort cars",
+							 options: .displayInline,
+							 children: [hightFirstAction,
+										lowFirstAction])
+		
+		let gridLayoutAction = UIAction(title: "Grid",
+										image: UIImage(systemName: "rectangle.grid.1x2.fill")) { [weak self] _ in
+			guard let self = self else {
+				return
+			}
+			
+			self.displayKind = .grid
+			self.applySnapshot(with: viewModel.cars)
+		}
+		
+		let listLayoutAction = UIAction(title: "List",
+										image: UIImage(systemName: "list.bullet")) { [weak self] _ in
+			guard let self = self else {
+				return
+			}
+			
+			self.displayKind = .list
+			self.applySnapshot(with: viewModel.cars)
+		}
+		
+		let bottomItem = UIMenu(title: "Change layout",
+								children: [gridLayoutAction,
+										   listLayoutAction])
+		
+		let rightBarButtonItem = UIBarButtonItem(
+			image: UIImage(systemName: "line.3.horizontal.decrease.circle"),
+			menu: UIMenu(
+				title: "",
+				options: .displayInline,
+				children: [topItem,
+						   bottomItem])
+		)
+		
+		navigationItem.rightBarButtonItem = rightBarButtonItem
 		
 		self.rightBarButtonItem = rightBarButtonItem
 		self.collectionView = collectionView
@@ -101,7 +133,7 @@ class HomeViewController: UIViewController {
 		
 		return layout
 	}
-
+	
 	private func bindViewModel() {
 		viewModel.fetchCars()
 		
@@ -126,7 +158,7 @@ class HomeViewController: UIViewController {
 					self.setNeedsUpdateContentUnavailableConfiguration()
 				}
 			}
-		.store(in: &disposables)
+			.store(in: &disposables)
 		
 		viewModel
 			.$hasError
@@ -157,9 +189,9 @@ class HomeViewController: UIViewController {
 	
 	private func reloadCell(with item: Car) {
 		var snapshot = diffableDatasource.snapshot()
-
+		
 		snapshot.reloadItems([.car(car: item)])
-
+		
 		self.diffableDatasource.apply(snapshot)
 	}
 	
@@ -195,12 +227,27 @@ class HomeViewController: UIViewController {
 			.margins(.all, .zero)
 		}
 		
-		diffableDatasource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: collectionView) { collectionView, indexPath, itemIdentifier in
+		let carInfoCellRegistration = UICollectionView.CellRegistration<CarInfoCollectionViewCell, Car> { cell, _ , car in
+			cell.configure(with: car, displayKind: .home)
+		}
+		
+		diffableDatasource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: collectionView) { [weak self] collectionView, indexPath, itemIdentifier in
 			switch itemIdentifier {
 			case .car(let car):
-				return collectionView.dequeueConfiguredReusableCell(using: cellRegistration,
-																	for: indexPath,
-																	item: car)
+				guard let self = self else {
+					return UICollectionViewCell()
+				}
+				
+				switch displayKind {
+				case .list:
+					return collectionView.dequeueConfiguredReusableCell(using: carInfoCellRegistration,
+																		for: indexPath,
+																		item: car)
+				case .grid:
+					return collectionView.dequeueConfiguredReusableCell(using: cellRegistration,
+																		for: indexPath,
+																		item: car)
+				}
 			}
 		}
 	}
@@ -244,6 +291,13 @@ extension HomeViewController: UICollectionViewDelegate {
 extension HomeViewController: DetailViewControllerDelegate {
 	func detailViewControllerDelegateDidTapOnFavButton(_ viewcontroller: DetailViewController, car: Car) {
 		reloadCell(with: car)
+	}
+}
+
+extension HomeViewController {
+	enum DisplayKind {
+		case list
+		case grid
 	}
 }
 

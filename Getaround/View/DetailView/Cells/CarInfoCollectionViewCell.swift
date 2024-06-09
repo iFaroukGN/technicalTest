@@ -31,6 +31,8 @@ final class CarInfoCollectionViewCell: UICollectionViewListCell {
 		let label = UILabel()
 		label.font = UIFont.boldSystemFont(ofSize: 24)
 		label.textColor = .label
+		label.adjustsFontSizeToFitWidth = true
+		label.minimumScaleFactor = 0.5
 		label.numberOfLines = 1
 		
 		let ratingView = RatingView()
@@ -95,10 +97,15 @@ final class CarInfoCollectionViewCell: UICollectionViewListCell {
 																   views: viewsDictionary))
 	}
 	
-	func configure(with car: Car) {
+	func configure(with car: Car, displayKind: DisplayKind = .detail) {
+		stackView.layoutMargins = displayKind == .detail ? stackView.layoutMargins : .init(top: 15, left: 20, bottom: 15, right: 20)
 		configure(with: "\(car.brand) \(car.model)", and: car.rating)
+
+		if displayKind == .home {
+			button.setImage(UIImage(systemName: car.isFavorite ? "suit.heart.fill" : "suit.heart"), for: .normal)
+		}
 		
-		configureCarRentalPriceView(with: car.formattedPrice)
+		configureCarRentalPriceView(with: car.formattedPrice, displayKind: displayKind)
 	}
 	
 	private func configure(with name: String, and rating: Rating) {
@@ -106,7 +113,14 @@ final class CarInfoCollectionViewCell: UICollectionViewListCell {
 		ratingView.configure(with: rating)
 	}
 	
-	private func configureCarRentalPriceView(with price: String) {
-		carRentalPriceView.configure(with: price)
+	private func configureCarRentalPriceView(with price: String, displayKind: DisplayKind = .detail) {
+		carRentalPriceView.configure(with: price, layerIshidden: (displayKind == .home))
+	}
+}
+
+extension CarInfoCollectionViewCell {
+	enum DisplayKind {
+		case home
+		case detail
 	}
 }
